@@ -1,6 +1,8 @@
 # F1WebViewer-SelfHosted
 Self-hosted reverse-proxy for F1 web viewer, includes a web server at port 13331.
 
+**If you are experiencing lag / stutter or other issues, try switching player in the Setting Tab.**
+
 ### Running Locally
 
 Download binary from https://github.com/iebb/F1WebViewer-SelfHosted/releases, or build your own, or just `go run main.go`
