@@ -1,7 +1,7 @@
 # F1WebViewer-SelfHosted
 Self-hosted reverse-proxy for F1 web viewer, includes a web server at port 13331.
 
-**If you are experiencing lag / stutter or other issues, try switching player in the Setting Tab.**
+**If you are experiencing lag / stutter or other issues locally, try using Bitmovin Player in the Setting Tab. License is NOT required for local deploys.**
 
 ### Running Locally
 
