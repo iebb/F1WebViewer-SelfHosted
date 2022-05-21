@@ -70,8 +70,13 @@ func main() {
 
 	staticRemote, _ := url.Parse("https://f1vp.netlify.app")
 	staticProxy := httputil.NewSingleHostReverseProxy(staticRemote)
+	serverSideLogin := 0
 	if login != "" && password != "" {
-		staticProxy.ModifyResponse = serverSideLoginRewriter
+		serverSideLogin = 1
+	}
+	staticProxy.ModifyResponse = func(resp *http.Response) (err error) {
+		resp.Header.Add("Set-Cookie", fmt.Sprintf("server_side_login=%d; Max-Age=86400; Path=/", serverSideLogin))
+		return nil
 	}
 	staticHandler := func(w http.ResponseWriter, r *http.Request) {
 		log.Printf("%s FE* - %s\n", r.RemoteAddr, r.URL.String())

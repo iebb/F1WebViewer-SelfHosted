@@ -47,8 +47,3 @@ func handleLogin(w http.ResponseWriter, r *http.Request) {
 	_, _ = io.Copy(w, resp.Body)
 	_ = resp.Body.Close()
 }
-
-func serverSideLoginRewriter(resp *http.Response) (err error) {
-	resp.Header.Add("Set-Cookie", "server_side_login=1; Max-Age=86400; Path=/")
-	return nil
-}
