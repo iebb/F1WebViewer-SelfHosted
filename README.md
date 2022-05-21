@@ -5,7 +5,7 @@ Self-hosted reverse-proxy for F1 web viewer, includes a web server at port 13331
 
 ### Running Locally
 
-Download binary from https://github.com/iebb/F1WebViewer-SelfHosted/releases, or build your own, or just `go run main.go`
+Download binary from https://github.com/iebb/F1WebViewer-SelfHosted/releases, or build your own, or just `go run .`
 
 ### Running on a Server (Requires SSL to make DRM work):
 Encrypted Media requires secure context to work, which means https is required except localhost. 
