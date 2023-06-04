@@ -12,7 +12,7 @@ type Crediential struct {
 	Password string `json:"Password"`
 }
 
-const LoginUrl = "https://f1tokenx.deta.dev/authenticate"
+const LoginUrl = "https://f1-api.jeb.nom.za/authenticate"
 
 func handleLogin(w http.ResponseWriter, r *http.Request) {
 	var p Crediential
